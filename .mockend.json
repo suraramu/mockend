@@ -29,7 +29,7 @@
     }
   },
 
-  "productImage": {
+  "Image": {
     "_": {
       "items": 25
     },
@@ -60,7 +60,7 @@
       ]
     },
     "images": {
-      "hasMany": "productImage"
+      "hasMany": "Image"
     }
   },
 
