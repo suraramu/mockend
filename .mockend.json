@@ -29,9 +29,38 @@
     }
   },
 
+  "ProductImage": {
+    "_": {
+      "items": 25
+    },
+    "url": {
+      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/250/200"
+    }
+  },
+
   "Product": {
     "_": {
       "items": 25
+    },
+    "title": {
+      "string": [
+        "Dragon fruit",
+        "Tindora",
+        "Banana",
+        "Chilli",
+        "Mushroom",
+        "Coconut",
+        "Milk",
+        "Gua",
+        "Orange",
+        "Bitter gourd",
+        "Drumstick",
+        "Bottle gourd",
+        "Some fruit"
+      ]
+    },
+    "images": {
+      "hasMany": "ProductImage"
     }
   },
 
