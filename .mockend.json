@@ -31,7 +31,7 @@
 
   "Image": {
     "_": {
-      "items": 250
+      "items": 100
     },
     "url": {
       "regexp": "https://picsum\\.photos/seed/[0-9]{5}/250/200"
