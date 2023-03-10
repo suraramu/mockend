@@ -39,8 +39,10 @@
     "_": {
       "items": 100
     },
-    "url": {
-      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/250/200"
+    "price": {
+      "currency": {
+        "string": ["INR"]
+      }
     },
     "product": {
       "belongsTo": "Product"
