@@ -6,12 +6,6 @@
     "avatarUrl": {
       "regexp": "https://i\\.pravatar\\.cc/150\\?u=[0-9]{5}"
     },
-    "statusMessage": {
-      "string": [
-        "working from home",
-        "watching Netflix"
-      ]
-    },
     "email": {
       "regexp": "#[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
     },
@@ -30,6 +24,18 @@
   },
 
   "Image": {
+    "_": {
+      "items": 100
+    },
+    "url": {
+      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/250/200"
+    },
+    "product": {
+      "belongsTo": "Product"
+    }
+  },
+
+  "Offer": {
     "_": {
       "items": 100
     },
@@ -62,6 +68,18 @@
         "Some fruit"
       ]
     },
+    "rating": {
+      "stars": "[1-5]{5}\\.[0-9]{1,2}",
+      "count": {
+        "int": { "min": 0, "max": 1000000 }
+      },
+      "likes": {
+        "int": { "min": 0, "max": 1000000 }
+      },
+      "dislikes": {
+        "int": { "min": 0, "max": 1000000 }
+      }
+    },
     "description": {
       "loremParagraphs": {
         "minLength": 10,
@@ -71,50 +89,11 @@
     "images": {
       "hasMany": "Image"
     },
+    "Offer": {
+      "hasOne": "Offer"
+    },
     "reviews": {
       "hasMany": "Review"
-    }
-  },
-
-  "Post": {
-    "_": {
-      "items": 10
-    },
-    "cover": {
-      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/270"
-    },
-    "title": {
-      "loremWords": {
-        "minLength": 5,
-        "maxLength": 20
-      }
-    },
-    "body": {
-      "loremParagraphs": {
-        "minLength": 10,
-        "maxLength": 100
-      }
-    },
-    "category": {
-      "string": ["one", "two", "three"]
-    },
-    "isDraft": {
-      "boolean": {}
-    },
-    "views": {
-      "int": {
-        "min": 0,
-        "max": 1000
-      }
-    },
-    "createdAt": {
-      "dateTime": {
-        "min": "2010-01-01T00:00:00Z",
-        "max": "2020-12-31T23:59:59Z"
-      }
-    },
-    "comments": {
-      "hasMany": "Comment"
     }
   },
 
@@ -140,6 +119,9 @@
     },
     "product": {
       "belongsTo": "Product"
+    },
+    "comments": {
+      "hasMany": "Comment"
     }
   },
 
