@@ -59,6 +59,9 @@
         "Some fruit"
       ]
     },
+    "comments": {
+      "hasMany": "Comment"
+    },
     "images": {
       "hasMany": "Image"
     },
