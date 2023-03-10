@@ -59,6 +59,12 @@
         "Some fruit"
       ]
     },
+    "description": {
+      "loremParagraphs": {
+        "minLength": 10,
+        "maxLength": 250
+      }
+    },
     "comments": {
       "hasMany": "Comment"
     },
