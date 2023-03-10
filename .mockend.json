@@ -31,7 +31,7 @@
 
   "Image": {
     "_": {
-      "items": 25
+      "items": 250
     },
     "url": {
       "regexp": "https://picsum\\.photos/seed/[0-9]{5}/250/200"
@@ -67,9 +67,6 @@
         "minLength": 10,
         "maxLength": 250
       }
-    },
-    "comments": {
-      "hasMany": "Comment"
     },
     "images": {
       "hasMany": "Image"
